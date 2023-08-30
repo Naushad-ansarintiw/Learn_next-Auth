@@ -30,6 +30,7 @@ export const authOptions = {
                 const password = credentials.password;
                 // Add logic here to look up the user from the credentials supplied
                 const admin = await Admin.findOne({ username });
+                console.log(admin);
 
                 if (!admin) {
                     const obj = { username: username, password: password };
